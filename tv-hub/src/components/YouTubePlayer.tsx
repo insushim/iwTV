@@ -158,8 +158,6 @@ export default function YouTubePlayer({ channel }: YouTubePlayerProps) {
           onLoad={handleLoad}
           style={{
             opacity: isLoading ? 0 : 1,
-            position: isLoading ? 'absolute' : 'relative',
-            pointerEvents: isLoading ? 'none' : 'auto',
           }}
         />
       )}

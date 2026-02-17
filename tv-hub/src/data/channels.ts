@@ -98,7 +98,7 @@ export const channels: Channel[] = [
     type: 'youtube',
     youtubeChannelId: 'UCuw1hxBo5mDVUhgMzRDk3aw',
     description: 'TV조선 뉴스 라이브',
-    officialUrl: 'http://broadcast.tvchosun.com',
+    officialUrl: 'https://www.tvchosun.com',
     channelNumber: 19,
   },
   {
@@ -111,6 +111,28 @@ export const channels: Channel[] = [
     description: 'YTN 사이언스 과학 뉴스 라이브',
     officialUrl: 'https://science.ytn.co.kr',
     channelNumber: 119,
+  },
+  {
+    id: 'yonhapnews',
+    name: '연합뉴스',
+    category: 'news',
+    logo: '/logos/yonhapnews.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCj3_t5p4L4aFsvdW3uHjnnw',
+    description: '대한민국 대표 뉴스통신 연합뉴스',
+    officialUrl: 'https://www.yna.co.kr',
+    channelNumber: 22,
+  },
+  {
+    id: 'nocut-news',
+    name: 'CBS 노컷뉴스',
+    category: 'news',
+    logo: '/logos/cbs.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCe-_Ej3FPQfbhoYLPdpMFug',
+    description: 'CBS 노컷뉴스 라이브',
+    officialUrl: 'https://www.nocutnews.co.kr',
+    channelNumber: 20,
   },
 
   // ===== BROADCAST (6) =====
@@ -223,7 +245,7 @@ export const channels: Channel[] = [
     type: 'youtube',
     youtubeChannelId: 'UCuw1hxBo5mDVUhgMzRDk3aw',
     description: 'TV조선 실시간 방송',
-    officialUrl: 'http://broadcast.tvchosun.com',
+    officialUrl: 'https://www.tvchosun.com',
     channelNumber: 19,
   },
 
@@ -283,6 +305,28 @@ export const channels: Channel[] = [
     officialUrl: 'https://www.edaily.co.kr',
     channelNumber: 54,
   },
+  {
+    id: 'sbs-biz',
+    name: 'SBS Biz',
+    category: 'economy',
+    logo: '/logos/sbs.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCbMjg2EvXs_RUGW-KrdM3pw',
+    description: 'SBS Biz 경제 전문 채널 라이브',
+    officialUrl: 'https://biz.sbs.co.kr',
+    channelNumber: 55,
+  },
+  {
+    id: 'tomato-tv',
+    name: '토마토TV',
+    category: 'economy',
+    logo: '/logos/tomato.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCfT7yR4wt5bJgRaGz_QFNEA',
+    description: '토마토TV 증권·투자 전문 방송',
+    officialUrl: 'https://www.etomato.com',
+    channelNumber: 56,
+  },
 
   // ===== PUBLIC (5) =====
   {
@@ -304,7 +348,7 @@ export const channels: Channel[] = [
     type: 'youtube',
     youtubeChannelId: 'UCmd1JKCrTiq6sT8-8vQMhiQ',
     description: '국회방송 NATV 국회 생중계',
-    officialUrl: 'https://www.natv.go.kr',
+    officialUrl: 'https://natv.go.kr',
     channelNumber: 100,
   },
   {
@@ -521,6 +565,11 @@ export const CHANNEL_COLORS: Record<string, string> = {
   'sen-tv': '#0073cf',
   'paxnet-tv': '#1b3a6b',
   'edaily-tv': '#e60012',
+  'sbs-biz': '#0066b3',
+  'tomato-tv': '#e60012',
+  // News (new)
+  'yonhapnews': '#003478',
+  'nocut-news': '#003399',
   // Public
   'ktv': '#1a5ea1',
   'natv': '#003a8c',

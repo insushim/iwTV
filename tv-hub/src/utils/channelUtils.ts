@@ -42,14 +42,13 @@ export function getLogoFallbackUrl(officialUrl?: string): string | null {
   if (!officialUrl) return null;
   try {
     const url = new URL(officialUrl);
-    return `https://logo.clearbit.com/${url.hostname}`;
+    return `https://www.google.com/s2/favicons?domain=${url.hostname}&sz=128`;
   } catch {
     return null;
   }
 }
 
 export function getChannelInitials(name: string): string {
-  // Remove common prefixes/suffixes and get first meaningful chars
   const cleaned = name
     .replace(/TV|뉴스|방송/gi, '')
     .trim();

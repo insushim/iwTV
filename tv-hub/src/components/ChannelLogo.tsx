@@ -20,10 +20,9 @@ export default function ChannelLogo({
   className = '',
 }: ChannelLogoProps) {
   const [imgError, setImgError] = useState(false);
-  const [clearbitError, setClearbitError] = useState(false);
 
   const color = getChannelColor(channelId);
-  const clearbitUrl = getLogoFallbackUrl(officialUrl);
+  const faviconUrl = getLogoFallbackUrl(officialUrl);
   const initials = getChannelInitials(name);
 
   const sizeClasses: Record<string, string> = {
@@ -34,8 +33,7 @@ export default function ChannelLogo({
 
   const sizeClass = sizeClasses[size] || sizeClasses.md;
 
-  // Show initials fallback
-  if (imgError && (clearbitError || !clearbitUrl)) {
+  if (imgError || !faviconUrl) {
     return (
       <div
         className={`channel-logo channel-logo-fallback ${sizeClass} ${className}`}
@@ -47,40 +45,15 @@ export default function ChannelLogo({
     );
   }
 
-  // Try clearbit if primary image failed
-  if (imgError && clearbitUrl && !clearbitError) {
-    return (
-      <div className={`channel-logo ${sizeClass} ${className}`} title={name}>
-        <img
-          src={clearbitUrl}
-          alt={name}
-          className="channel-logo-img"
-          onError={() => setClearbitError(true)}
-          loading="lazy"
-        />
-      </div>
-    );
-  }
-
-  // Primary image (logo path from data)
   return (
     <div className={`channel-logo ${sizeClass} ${className}`} title={name}>
-      {clearbitUrl ? (
-        <img
-          src={clearbitUrl}
-          alt={name}
-          className="channel-logo-img"
-          onError={() => setImgError(true)}
-          loading="lazy"
-        />
-      ) : (
-        <div
-          className="channel-logo channel-logo-fallback"
-          style={{ backgroundColor: color, width: '100%', height: '100%' }}
-        >
-          <span className="channel-logo-initials">{initials}</span>
-        </div>
-      )}
+      <img
+        src={faviconUrl}
+        alt={name}
+        className="channel-logo-img"
+        onError={() => setImgError(true)}
+        loading="lazy"
+      />
     </div>
   );
 }

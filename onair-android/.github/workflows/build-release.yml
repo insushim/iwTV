@@ -1,0 +1,94 @@
+name: Build & Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version (e.g., 1.0.1)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Determine version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "version=${{ inputs.version }}" >> $GITHUB_OUTPUT
+            echo "tag=v${{ inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            TAG="${GITHUB_REF#refs/tags/v}"
+            echo "version=$TAG" >> $GITHUB_OUTPUT
+            echo "tag=v$TAG" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update version in build.gradle
+        run: |
+          VERSION=${{ steps.version.outputs.version }}
+          VERSION_CODE=$(echo $VERSION | awk -F. '{print $1*10000 + $2*100 + $3}')
+          sed -i "s/versionCode .*/versionCode $VERSION_CODE/" app/build.gradle
+          sed -i "s/versionName .*/versionName \"$VERSION\"/" app/build.gradle
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease
+
+      - name: Sign APK
+        uses: r0adkll/sign-android-release@v1
+        id: sign_app
+        with:
+          releaseDirectory: app/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+          alias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+        env:
+          BUILD_TOOLS_VERSION: "34.0.0"
+
+      - name: Rename APK
+        run: |
+          mv ${{ steps.sign_app.outputs.signedReleaseFile }} \
+            onair-${{ steps.version.outputs.version }}.apk
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: "온에어 ${{ steps.version.outputs.tag }}"
+          body: |
+            ## 온에어 ${{ steps.version.outputs.tag }}
+
+            ### 변경사항
+            - 최신 채널 목록 업데이트
+            - 성능 개선 및 버그 수정
+
+            ### 설치 방법
+            1. 아래 APK 파일을 다운로드합니다
+            2. 다운로드한 파일을 실행하여 설치합니다
+            3. "출처를 알 수 없는 앱" 설치를 허용해야 할 수 있습니다
+          files: onair-${{ steps.version.outputs.version }}.apk
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

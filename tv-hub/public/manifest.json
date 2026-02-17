@@ -1,0 +1,26 @@
+{
+  "name": "온에어 - 모든 채널, 한 화면에",
+  "short_name": "온에어",
+  "description": "한국 TV 실시간 스트리밍 허브. 뉴스, 지상파, 종편, 경제, 공공, 종교, 해외, 스포츠 채널을 한 곳에서 시청하세요.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a1a",
+  "theme_color": "#6366f1",
+  "orientation": "any",
+  "lang": "ko-KR",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "news"]
+}

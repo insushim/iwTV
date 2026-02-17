@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# next.js
+tv-hub/.next/
+tv-hub/out/
+
+# production
+build/
+dist/
+
+# misc
+.DS_Store
+*.pem
+.env
+.env*.local
+
+# debug
+npm-debug.log*
+
+# android
+onair-android/.gradle/
+onair-android/build/
+onair-android/app/build/
+onair-android/local.properties
+*.apk
+*.jks
+*.keystore
+onair-android/.idea/

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="grad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="192" height="192" rx="40" fill="#0a0a1a"/>
+  <!-- TV body -->
+  <rect x="24" y="36" width="144" height="96" rx="16" ry="16" fill="url(#grad192)"/>
+  <!-- Screen -->
+  <rect x="36" y="48" width="120" height="72" rx="8" ry="8" fill="#0a0a1a" opacity="0.6"/>
+  <!-- ON text -->
+  <text x="62" y="96" font-family="Arial,sans-serif" font-weight="900" font-size="40" fill="white">ON</text>
+  <!-- Stand -->
+  <rect x="56" y="140" width="80" height="8" rx="4" fill="url(#grad192)" opacity="0.8"/>
+  <!-- LIVE dot -->
+  <circle cx="150" cy="52" r="10" fill="#ef4444">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

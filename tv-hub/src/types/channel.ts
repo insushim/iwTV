@@ -7,8 +7,7 @@ export type ChannelCategory =
   | 'economy'
   | 'public'
   | 'religion'
-  | 'world'
-  | 'sports';
+  | 'world';
 
 export interface Channel {
   id: string;
@@ -41,5 +40,4 @@ export const CATEGORIES: CategoryInfo[] = [
   { id: 'public', name: '공공', icon: '🏛', color: 'cyan' },
   { id: 'religion', name: '종교', icon: '✝', color: 'amber' },
   { id: 'world', name: '해외', icon: '🌍', color: 'indigo' },
-  { id: 'sports', name: '스포츠', icon: '⚽', color: 'orange' },
 ];

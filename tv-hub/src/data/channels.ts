@@ -437,8 +437,8 @@ export const channels: Channel[] = [
     name: 'CNN',
     category: 'world',
     logo: '/logos/cnn.png',
-    type: 'external',
-    externalUrl: 'https://edition.cnn.com/live-tv',
+    type: 'youtube',
+    youtubeChannelId: 'UCupvZG-5ko_eiXAupbDfxWw',
     description: 'CNN International 실시간 뉴스',
     officialUrl: 'https://edition.cnn.com',
     channelNumber: 600,
@@ -510,28 +510,41 @@ export const channels: Channel[] = [
     channelNumber: 606,
   },
 
-  // ===== SPORTS (2) =====
+  // ===== ENTERTAINMENT =====
   {
-    id: 'spotv',
-    name: 'SPOTV',
-    category: 'sports',
-    logo: '/logos/spotv.png',
-    type: 'external',
-    externalUrl: 'https://www.spotvnow.co.kr',
-    description: 'SPOTV 스포츠 전문 채널',
-    officialUrl: 'https://www.spotvnow.co.kr',
-    channelNumber: 60,
+    id: 'jtbc-ent',
+    name: 'JTBC Entertainment',
+    category: 'general',
+    logo: '/logos/jtbc.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCFL1sCAksD6_7JIZwwHcwjQ',
+    description: 'JTBC 예능 공식 유튜브 채널',
+    officialUrl: 'https://www.jtbc.co.kr',
+    channelNumber: 15,
   },
   {
-    id: 'kbs-sports',
-    name: 'KBS N Sports',
-    category: 'sports',
-    logo: '/logos/kbs-sports.png',
-    type: 'external',
-    externalUrl: 'https://sports.kbs.co.kr',
-    description: 'KBS N 스포츠 채널',
-    officialUrl: 'https://sports.kbs.co.kr',
-    channelNumber: 61,
+    id: 'sbs-ent',
+    name: 'SBS Entertainment',
+    category: 'broadcast',
+    logo: '/logos/sbs.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCmjNKt6kITwaZTqvWuaSPLg',
+    description: 'SBS 예능 공식 유튜브 채널',
+    officialUrl: 'https://www.sbs.co.kr',
+    channelNumber: 5,
+  },
+
+  // ===== INVESTIGATIVE =====
+  {
+    id: 'newstapa',
+    name: '뉴스타파',
+    category: 'news',
+    logo: '/logos/newstapa.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCeFUGS2VCOb6DO3BiUgvwNA',
+    description: '뉴스타파 탐사보도 독립언론',
+    officialUrl: 'https://newstapa.org',
+    channelNumber: 21,
   },
 ];
 
@@ -589,7 +602,9 @@ export const CHANNEL_COLORS: Record<string, string> = {
   'france24': '#0055a4',
   'aljazeera': '#d2a44b',
   'cgtn': '#1e4d8c',
-  // Sports
-  'spotv': '#ff6b00',
-  'kbs-sports': '#1a1a6c',
+  // Entertainment
+  'jtbc-ent': '#e4002b',
+  'sbs-ent': '#0066b3',
+  // Investigative
+  'newstapa': '#1a1a1a',
 };

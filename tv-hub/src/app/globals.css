@@ -737,12 +737,16 @@ body {
 .video-player {
   display: flex;
   flex-direction: column;
+  flex: 1;
   animation: fadeIn 0.3s ease;
+  min-height: 0;
 }
 
 .video-player-content {
   position: relative;
   width: 100%;
+  flex: 1;
+  min-height: 0;
   background-color: #000000;
 }
 
@@ -750,8 +754,11 @@ body {
 .video-player-hls {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  /* Use calc to fill available viewport height minus header and info bar */
+  padding-bottom: min(56.25%, calc(100vh - var(--header-height) - 52px));
   background-color: #000000;
+  max-height: calc(100vh - var(--header-height) - 52px);
 }
 
 .video-player-iframe,

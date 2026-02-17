@@ -75,7 +75,7 @@ export default function YouTubePlayer({ channel }: YouTubePlayerProps) {
 
   // Build embed URL based on resolved video ID
   const embedUrl = videoId
-    ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1`
+    ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1&vq=hd1080&hd=1`
     : null;
 
   return (

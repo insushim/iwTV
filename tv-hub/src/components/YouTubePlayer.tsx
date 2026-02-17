@@ -33,8 +33,9 @@ export default function YouTubePlayer({ channel }: YouTubePlayerProps) {
 
     const fetchVideoId = async () => {
       try {
-        const res = await fetch(`/api/live/${channel.youtubeChannelId}`, {
+        const res = await fetch(`/api/live/${channel.youtubeChannelId}?t=${Date.now()}`, {
           signal: abortRef.current!.signal,
+          cache: 'no-store',
         });
 
         if (res.ok) {

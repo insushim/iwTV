@@ -379,13 +379,25 @@ export const channels: Channel[] = [
     category: 'public',
     logo: '/logos/tbs.png',
     type: 'youtube',
-    youtubeChannelId: 'UC5BMQOsAB8hKUyHu9KI6yig',
-    description: 'tbs 서울교통방송 TV',
+    youtubeChannelId: 'UC5HSw5OY2vfVFSihpiB-AVQ',
+    description: 'tbs 시민의방송 TV',
     officialUrl: 'https://www.tbs.seoul.kr',
     channelNumber: 97,
   },
 
-  // ===== RELIGION (4) =====
+  {
+    id: 'kbs-world',
+    name: 'KBS World TV',
+    category: 'public',
+    logo: '/logos/kbs.png',
+    type: 'youtube',
+    youtubeChannelId: 'UC5BMQOsAB8hKUyHu9KI6yig',
+    description: 'KBS World TV 한류 콘텐츠 글로벌 채널',
+    officialUrl: 'https://www.kbsworld.co.kr',
+    channelNumber: 98,
+  },
+
+  // ===== RELIGION (5) =====
   {
     id: 'cts',
     name: 'CTS 기독교TV',
@@ -431,7 +443,19 @@ export const channels: Channel[] = [
     channelNumber: 38,
   },
 
-  // ===== WORLD (7) =====
+  {
+    id: 'cgntv',
+    name: 'CGNTV',
+    category: 'religion',
+    logo: '/logos/cgntv.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCB8GtWm-5xKmIeh9ssIDyBA',
+    description: 'CGN 기독교 복음 방송 24시간',
+    officialUrl: 'https://www.cgntv.net',
+    channelNumber: 42,
+  },
+
+  // ===== WORLD (13) =====
   {
     id: 'cnn',
     name: 'CNN',
@@ -508,6 +532,73 @@ export const channels: Channel[] = [
     description: 'CGTN 중국 국제방송 영어 채널',
     officialUrl: 'https://www.cgtn.com',
     channelNumber: 606,
+  },
+
+  {
+    id: 'sky-news',
+    name: 'Sky News',
+    category: 'world',
+    logo: '/logos/skynews.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCoMdktPbSTixAyNGwb-UYkQ',
+    description: 'Sky News UK 24시간 영어 뉴스',
+    officialUrl: 'https://news.sky.com',
+    channelNumber: 607,
+  },
+  {
+    id: 'abc-news',
+    name: 'ABC News',
+    category: 'world',
+    logo: '/logos/abcnews.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCBi2mrWuNuyYy4gbM6fU18Q',
+    description: 'ABC News 미국 뉴스 24시간',
+    officialUrl: 'https://abcnews.go.com',
+    channelNumber: 608,
+  },
+  {
+    id: 'nbc-news',
+    name: 'NBC News',
+    category: 'world',
+    logo: '/logos/nbcnews.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCeY0bbntWzzVIaj2z3QigXg',
+    description: 'NBC News NOW 미국 뉴스 24시간',
+    officialUrl: 'https://www.nbcnews.com',
+    channelNumber: 609,
+  },
+  {
+    id: 'euronews',
+    name: 'Euronews',
+    category: 'world',
+    logo: '/logos/euronews.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCSrZ3UV4jOidv8ppoVuvW9Q',
+    description: 'Euronews 유럽 국제뉴스 24시간',
+    officialUrl: 'https://www.euronews.com',
+    channelNumber: 610,
+  },
+  {
+    id: 'trt-world',
+    name: 'TRT World',
+    category: 'world',
+    logo: '/logos/trtworld.png',
+    type: 'youtube',
+    youtubeChannelId: 'UC7fWeaHhqgM4Ry-RMpM2YYw',
+    description: 'TRT World 터키 국제방송 영어',
+    officialUrl: 'https://www.trtworld.com',
+    channelNumber: 611,
+  },
+  {
+    id: 'cna',
+    name: 'CNA',
+    category: 'world',
+    logo: '/logos/cna.png',
+    type: 'youtube',
+    youtubeChannelId: 'UC83jt4dlz1Gjl58fzQrrKZg',
+    description: 'Channel NewsAsia 아시아 뉴스 24시간',
+    officialUrl: 'https://www.channelnewsasia.com',
+    channelNumber: 612,
   },
 
   // ===== ENTERTAINMENT =====
@@ -602,6 +693,16 @@ export const CHANNEL_COLORS: Record<string, string> = {
   'france24': '#0055a4',
   'aljazeera': '#d2a44b',
   'cgtn': '#1e4d8c',
+  'cgntv': '#003399',
+  // World (new)
+  'sky-news': '#c80000',
+  'abc-news': '#003a7e',
+  'nbc-news': '#0089d0',
+  'euronews': '#003366',
+  'trt-world': '#e30613',
+  'cna': '#e41e26',
+  // Public (new)
+  'kbs-world': '#1a1a6c',
   // Entertainment
   'jtbc-ent': '#e4002b',
   'sbs-ent': '#0066b3',

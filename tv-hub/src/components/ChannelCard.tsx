@@ -56,7 +56,7 @@ export default function ChannelCard({ channel }: ChannelCardProps) {
       </div>
 
       <div className="channel-card-actions">
-        {channel.type === 'youtube' && (
+        {(channel.type === 'youtube' || channel.type === 'hls') && (
           <span className="live-badge">LIVE</span>
         )}
         <button

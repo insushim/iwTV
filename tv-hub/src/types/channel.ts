@@ -1,6 +1,7 @@
 export type ChannelType = 'youtube' | 'hls' | 'external';
 
 export type ChannelCategory =
+  | 'broadcast'
   | 'news'
   | 'public'
   | 'world';
@@ -29,6 +30,7 @@ export interface CategoryInfo {
 export const CATEGORIES: CategoryInfo[] = [
   { id: 'all', name: '전체', icon: '📡', color: 'indigo' },
   { id: 'favorites', name: '즐겨찾기', icon: '⭐', color: 'yellow' },
+  { id: 'broadcast', name: '지상파', icon: '📺', color: 'blue' },
   { id: 'news', name: '뉴스', icon: '📰', color: 'red' },
   { id: 'public', name: '공공', icon: '🏛', color: 'cyan' },
   { id: 'world', name: '해외', icon: '🌍', color: 'indigo' },

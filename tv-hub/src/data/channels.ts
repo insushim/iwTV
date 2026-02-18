@@ -1,6 +1,52 @@
 import { Channel } from '@/types/channel';
 
 export const channels: Channel[] = [
+  // ===== BROADCAST (4) - 지상파 (EBS 공식 HLS + 지역MBC/SBS HLS) =====
+  {
+    id: 'ebs1',
+    name: 'EBS 1TV',
+    category: 'broadcast',
+    logo: '/logos/ebs.png',
+    type: 'hls',
+    hlsUrl: 'https://ebsonair.ebs.co.kr/ebs1familypc/familypc1m/playlist.m3u8',
+    description: 'EBS 1TV 교육방송 실시간',
+    officialUrl: 'https://www.ebs.co.kr',
+    channelNumber: 10,
+  },
+  {
+    id: 'ebs2',
+    name: 'EBS 2TV',
+    category: 'broadcast',
+    logo: '/logos/ebs.png',
+    type: 'hls',
+    hlsUrl: 'https://ebsonair.ebs.co.kr/ebs2familypc/familypc1m/playlist.m3u8',
+    description: 'EBS 2TV 교육방송 실시간',
+    officialUrl: 'https://www.ebs.co.kr',
+    channelNumber: 95,
+  },
+  {
+    id: 'mbc-gwangju',
+    name: 'MBC (광주)',
+    category: 'broadcast',
+    logo: '/logos/mbc.png',
+    type: 'hls',
+    hlsUrl: 'https://media.kjmbc.co.kr/hls/live/stream/playlist.m3u8',
+    description: '광주MBC 실시간 (서울MBC 동시방송)',
+    officialUrl: 'https://www.kjmbc.co.kr',
+    channelNumber: 11,
+  },
+  {
+    id: 'knn',
+    name: 'SBS (부산KNN)',
+    category: 'broadcast',
+    logo: '/logos/sbs.png',
+    type: 'hls',
+    hlsUrl: 'https://stream1.knn.co.kr/hls/9ly4534y7dm2xfa123r2_tv/index.m3u8',
+    description: 'KNN 부산경남 실시간 (SBS 동시방송)',
+    officialUrl: 'https://www.knn.co.kr',
+    channelNumber: 5,
+  },
+
   // ===== NEWS (9) - 24시간 라이브 확인 =====
   {
     id: 'ytn',
@@ -340,6 +386,11 @@ export const channels: Channel[] = [
 ];
 
 export const CHANNEL_COLORS: Record<string, string> = {
+  // Broadcast
+  'ebs1': '#00a651',
+  'ebs2': '#00a651',
+  'mbc-gwangju': '#00a651',
+  'knn': '#0066b3',
   // News
   'ytn': '#ff0000',
   'yonhapnews-tv': '#003478',

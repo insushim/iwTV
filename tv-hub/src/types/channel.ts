@@ -4,6 +4,8 @@ export type ChannelCategory =
   | 'broadcast'
   | 'news'
   | 'public'
+  | 'religion'
+  | 'shopping'
   | 'world';
 
 export interface Channel {
@@ -33,5 +35,7 @@ export const CATEGORIES: CategoryInfo[] = [
   { id: 'broadcast', name: '지상파', icon: '📺', color: 'blue' },
   { id: 'news', name: '뉴스', icon: '📰', color: 'red' },
   { id: 'public', name: '공공', icon: '🏛', color: 'cyan' },
+  { id: 'religion', name: '종교', icon: '🙏', color: 'purple' },
+  { id: 'shopping', name: '홈쇼핑', icon: '🛒', color: 'orange' },
   { id: 'world', name: '해외', icon: '🌍', color: 'indigo' },
 ];

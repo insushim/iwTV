@@ -1,7 +1,8 @@
 import { Channel } from '@/types/channel';
 
 export const channels: Channel[] = [
-  // ===== BROADCAST (4) - 지상파 (EBS 공식 HLS + 지역MBC/SBS HLS) =====
+  // ===== BROADCAST (10) - 지상파 (EBS 공식 HLS + 지역MBC/SBS HLS) =====
+  // --- EBS (공식 HLS) ---
   {
     id: 'ebs1',
     name: 'EBS 1TV',
@@ -24,6 +25,7 @@ export const channels: Channel[] = [
     officialUrl: 'https://www.ebs.co.kr',
     channelNumber: 95,
   },
+  // --- 지역 MBC (서울MBC 동시방송) ---
   {
     id: 'mbc-gwangju',
     name: 'MBC (광주)',
@@ -31,20 +33,87 @@ export const channels: Channel[] = [
     logo: '/logos/mbc.png',
     type: 'hls',
     hlsUrl: 'https://media.kjmbc.co.kr/hls/live/stream/playlist.m3u8',
-    description: '광주MBC 실시간 (서울MBC 동시방송)',
+    description: '광주MBC 실시간 1080p',
     officialUrl: 'https://www.kjmbc.co.kr',
     channelNumber: 11,
   },
   {
-    id: 'knn',
-    name: 'SBS (부산KNN)',
+    id: 'mbc-daejeon',
+    name: 'MBC (대전)',
+    category: 'broadcast',
+    logo: '/logos/mbc.png',
+    type: 'hls',
+    hlsUrl: 'https://ns1.tjmbc.co.kr/live/myStream.sdp/playlist.m3u8',
+    description: '대전MBC 실시간 720p',
+    officialUrl: 'https://www.tjmbc.co.kr',
+    channelNumber: 11,
+  },
+  {
+    id: 'mbc-chuncheon',
+    name: 'MBC (춘천)',
+    category: 'broadcast',
+    logo: '/logos/mbc.png',
+    type: 'hls',
+    hlsUrl: 'https://stream.chmbc.co.kr/TV/myStream/playlist.m3u8',
+    description: '춘천MBC 실시간 1080p',
+    officialUrl: 'https://www.chmbc.co.kr',
+    channelNumber: 11,
+  },
+  {
+    id: 'mbc-yeosu',
+    name: 'MBC (여수)',
+    category: 'broadcast',
+    logo: '/logos/mbc.png',
+    type: 'hls',
+    hlsUrl: 'https://5c3639aa99149.streamlock.net/live_TV/tv/playlist.m3u8',
+    description: '여수MBC 실시간 1080p',
+    officialUrl: 'https://www.ysmbc.co.kr',
+    channelNumber: 11,
+  },
+  {
+    id: 'mbc-jeju',
+    name: 'MBC (제주)',
+    category: 'broadcast',
+    logo: '/logos/mbc.png',
+    type: 'hls',
+    hlsUrl: 'https://wowza.jejumbc.com/live/tv_jejumbc/playlist.m3u8',
+    description: '제주MBC 실시간',
+    officialUrl: 'https://www.jejumbc.com',
+    channelNumber: 11,
+  },
+  // --- 지역 SBS 계열 ---
+  {
+    id: 'cjb',
+    name: 'SBS (청주CJB)',
     category: 'broadcast',
     logo: '/logos/sbs.png',
     type: 'hls',
-    hlsUrl: 'https://stream1.knn.co.kr/hls/9ly4534y7dm2xfa123r2_tv/index.m3u8',
-    description: 'KNN 부산경남 실시간 (SBS 동시방송)',
-    officialUrl: 'https://www.knn.co.kr',
+    hlsUrl: 'https://wowza1.cjb.co.kr/live/cjbtv/playlist.m3u8',
+    description: 'CJB 청주 실시간 720p (SBS 동시방송)',
+    officialUrl: 'https://www.cjb.co.kr',
     channelNumber: 5,
+  },
+  {
+    id: 'jibs',
+    name: 'SBS (제주JIBS)',
+    category: 'broadcast',
+    logo: '/logos/sbs.png',
+    type: 'hls',
+    hlsUrl: 'https://media.jibs.co.kr/stream/1_2000_139038/index.m3u8',
+    description: 'JIBS 제주 실시간 (SBS 동시방송)',
+    officialUrl: 'https://www.jibs.co.kr',
+    channelNumber: 5,
+  },
+  {
+    id: 'obs',
+    name: 'OBS 경인TV',
+    category: 'broadcast',
+    logo: '/logos/obs.png',
+    type: 'hls',
+    hlsUrl: 'https://vod.obs.co.kr:444/live/obsstream1/tv.stream/playlist.m3u8',
+    description: 'OBS 경인TV 수도권 실시간 540p',
+    officialUrl: 'https://www.obs.co.kr',
+    channelNumber: 12,
   },
 
   // ===== NEWS (9) - 24시간 라이브 확인 =====
@@ -148,7 +217,7 @@ export const channels: Channel[] = [
     channelNumber: 19,
   },
 
-  // ===== PUBLIC (4) - 24시간 라이브 확인 =====
+  // ===== PUBLIC (7) - 24시간 라이브 확인 =====
   {
     id: 'tbs',
     name: 'tbs TV',
@@ -193,6 +262,39 @@ export const channels: Channel[] = [
     description: '서울경제TV 24시간 경제뉴스',
     officialUrl: 'https://www.sentv.co.kr',
     channelNumber: 99,
+  },
+  {
+    id: 'natv',
+    name: '국회방송',
+    category: 'public',
+    logo: '/logos/natv.png',
+    type: 'hls',
+    hlsUrl: 'https://m.webcast.go.kr/live/smil:natv_720p.smil/playlist.m3u8',
+    description: '국회방송 NATV 실시간 720p',
+    officialUrl: 'https://www.natv.go.kr',
+    channelNumber: 100,
+  },
+  {
+    id: 'ktv',
+    name: 'KTV 국민방송',
+    category: 'public',
+    logo: '/logos/ktv.png',
+    type: 'hls',
+    hlsUrl: 'https://hlive.ktv.go.kr/live/klive_h.stream/playlist.m3u8',
+    description: 'KTV 국민방송 정부 채널 1080p',
+    officialUrl: 'https://www.ktv.go.kr',
+    channelNumber: 101,
+  },
+  {
+    id: 'gugak',
+    name: '국악방송',
+    category: 'public',
+    logo: '/logos/gugak.png',
+    type: 'hls',
+    hlsUrl: 'https://mgugaklive.nowcdn.co.kr/gugakvideo/gugakvideo.stream/playlist.m3u8',
+    description: '국립국악원 국악방송 TV',
+    officialUrl: 'https://www.gugakfm.co.kr',
+    channelNumber: 102,
   },
 
   // ===== WORLD (17) - 24시간 라이브 확인 =====
@@ -390,7 +492,13 @@ export const CHANNEL_COLORS: Record<string, string> = {
   'ebs1': '#00a651',
   'ebs2': '#00a651',
   'mbc-gwangju': '#00a651',
-  'knn': '#0066b3',
+  'mbc-daejeon': '#00a651',
+  'mbc-chuncheon': '#00a651',
+  'mbc-yeosu': '#00a651',
+  'mbc-jeju': '#00a651',
+  'cjb': '#0066b3',
+  'jibs': '#0066b3',
+  'obs': '#003366',
   // News
   'ytn': '#ff0000',
   'yonhapnews-tv': '#003478',
@@ -406,6 +514,9 @@ export const CHANNEL_COLORS: Record<string, string> = {
   'kbs-world': '#1a1a6c',
   'arirang': '#e94e1b',
   'sedaily-tv': '#0066cc',
+  'natv': '#003478',
+  'ktv': '#003478',
+  'gugak': '#8B4513',
   // World
   'cnn': '#cc0000',
   'sky-news': '#c80000',

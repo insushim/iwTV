@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">온에어</string>
+    <string name="error_icon">📡</string>
+    <string name="error_title">연결에 실패했습니다</string>
+    <string name="error_message">인터넷 연결을 확인하고 다시 시도해 주세요.</string>
+    <string name="retry">다시 시도</string>
+</resources>

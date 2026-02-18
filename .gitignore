@@ -21,11 +21,16 @@ dist/
 npm-debug.log*
 
 # android
-onair-android/.gradle/
-onair-android/build/
-onair-android/app/build/
-onair-android/local.properties
+tv-hub/android/.gradle/
+tv-hub/android/build/
+tv-hub/android/app/build/
+tv-hub/android/local.properties
+tv-hub/android/gradle/wrapper/gradle-wrapper.jar
+tv-hub/android/gradlew
+tv-hub/android/gradlew.bat
 *.apk
 *.jks
 *.keystore
-onair-android/.idea/
+tv-hub/android/.idea/
+tv-hub/android/*.iml
+tv-hub/android/app/*.iml

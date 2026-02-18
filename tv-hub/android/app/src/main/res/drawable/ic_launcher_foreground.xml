@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- TV screen outline -->
+    <path
+        android:pathData="M28,34 L80,34 Q84,34 84,38 L84,66 Q84,70 80,70 L28,70 Q24,70 24,66 L24,38 Q24,34 28,34 Z"
+        android:strokeWidth="2.5"
+        android:strokeColor="#ffffff"
+        android:fillColor="#00000000" />
+
+    <!-- ON text -->
+    <path
+        android:pathData="M35,46 Q35,42 39,42 Q43,42 43,46 L43,58 Q43,62 39,62 Q35,62 35,58 Z"
+        android:strokeWidth="2"
+        android:strokeColor="#ffffff"
+        android:fillColor="#00000000" />
+
+    <path
+        android:pathData="M48,42 L48,62 M48,42 L60,62 M60,42 L60,62"
+        android:strokeWidth="2"
+        android:strokeColor="#ffffff"
+        android:fillColor="#00000000" />
+
+    <!-- Live dot -->
+    <path
+        android:pathData="M69,44 A3,3 0 1,1 69,43.99 Z"
+        android:fillColor="#ef4444" />
+
+    <!-- Stand -->
+    <path
+        android:pathData="M44,70 L44,76 M64,70 L64,76 M38,76 L70,76"
+        android:strokeWidth="2"
+        android:strokeColor="#ffffff"
+        android:fillColor="#00000000" />
+</vector>

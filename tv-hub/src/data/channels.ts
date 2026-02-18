@@ -135,74 +135,6 @@ export const channels: Channel[] = [
     channelNumber: 20,
   },
 
-  // ===== BROADCAST (6) =====
-  {
-    id: 'kbs1',
-    name: 'KBS 1TV',
-    category: 'broadcast',
-    logo: '/logos/kbs1.png',
-    type: 'youtube',
-    youtubeChannelId: 'UC3m0s5XAQydCtbLHc8j1Uog',
-    description: 'KBS 1TV 실시간 방송',
-    officialUrl: 'https://www.kbs.co.kr',
-    channelNumber: 9,
-  },
-  {
-    id: 'kbs2',
-    name: 'KBS 2TV',
-    category: 'broadcast',
-    logo: '/logos/kbs2.png',
-    type: 'youtube',
-    youtubeChannelId: 'UC3m0s5XAQydCtbLHc8j1Uog',
-    description: 'KBS 2TV 실시간 방송',
-    officialUrl: 'https://www.kbs.co.kr',
-    channelNumber: 7,
-  },
-  {
-    id: 'mbc-tv',
-    name: 'MBC TV',
-    category: 'broadcast',
-    logo: '/logos/mbc.png',
-    type: 'youtube',
-    youtubeChannelId: 'UCiwQRG2sCcfjKkgxMEdJGPg',
-    description: 'MBC TV 실시간 방송',
-    officialUrl: 'https://www.imbc.com',
-    channelNumber: 11,
-  },
-  {
-    id: 'sbs-tv',
-    name: 'SBS TV',
-    category: 'broadcast',
-    logo: '/logos/sbs.png',
-    type: 'youtube',
-    youtubeChannelId: 'UCcOYEm78CpaZQvPE6LtoSeA',
-    description: 'SBS TV 실시간 방송',
-    officialUrl: 'https://www.sbs.co.kr',
-    channelNumber: 5,
-  },
-  {
-    id: 'ebs1',
-    name: 'EBS 1TV',
-    category: 'broadcast',
-    logo: '/logos/ebs.png',
-    type: 'youtube',
-    youtubeChannelId: 'UCDk6pLgbBxVOG9tqinMGGDw',
-    description: 'EBS 교육방송 1TV 라이브',
-    officialUrl: 'https://www.ebs.co.kr',
-    channelNumber: 10,
-  },
-  {
-    id: 'ebs2',
-    name: 'EBS 2TV',
-    category: 'broadcast',
-    logo: '/logos/ebs2.png',
-    type: 'youtube',
-    youtubeChannelId: 'UCRTsa2a1hrJSe3pHKDfGwqQ',
-    description: 'EBS 교육방송 2TV 라이브',
-    officialUrl: 'https://www.ebs.co.kr',
-    channelNumber: 95,
-  },
-
   // ===== GENERAL (4) =====
   {
     id: 'jtbc-tv',
@@ -613,17 +545,6 @@ export const channels: Channel[] = [
     officialUrl: 'https://www.jtbc.co.kr',
     channelNumber: 15,
   },
-  {
-    id: 'sbs-ent',
-    name: 'SBS Entertainment',
-    category: 'broadcast',
-    logo: '/logos/sbs.png',
-    type: 'youtube',
-    youtubeChannelId: 'UCmjNKt6kITwaZTqvWuaSPLg',
-    description: 'SBS 예능 공식 유튜브 채널',
-    officialUrl: 'https://www.sbs.co.kr',
-    channelNumber: 5,
-  },
 
   // ===== INVESTIGATIVE =====
   {
@@ -651,13 +572,6 @@ export const CHANNEL_COLORS: Record<string, string> = {
   'channel-a': '#ff6600',
   'tv-chosun': '#003399',
   'ytn-science': '#00a79d',
-  // Broadcast
-  'kbs1': '#1a1a6c',
-  'kbs2': '#1a1a6c',
-  'mbc-tv': '#00a651',
-  'sbs-tv': '#0066b3',
-  'ebs1': '#ec6c00',
-  'ebs2': '#ec6c00',
   // General
   'jtbc-tv': '#e4002b',
   'mbn-tv': '#ed1c24',
@@ -705,7 +619,6 @@ export const CHANNEL_COLORS: Record<string, string> = {
   'kbs-world': '#1a1a6c',
   // Entertainment
   'jtbc-ent': '#e4002b',
-  'sbs-ent': '#0066b3',
   // Investigative
   'newstapa': '#1a1a1a',
 };

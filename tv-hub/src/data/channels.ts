@@ -1,7 +1,7 @@
 import { Channel } from '@/types/channel';
 
 export const channels: Channel[] = [
-  // ===== NEWS (8) - 24시간 라이브 확인 =====
+  // ===== NEWS (9) - 24시간 라이브 확인 =====
   {
     id: 'ytn',
     name: 'YTN',
@@ -90,8 +90,19 @@ export const channels: Channel[] = [
     officialUrl: 'https://www.ichannela.com',
     channelNumber: 18,
   },
+  {
+    id: 'tv-chosun-news',
+    name: 'TV조선 뉴스',
+    category: 'news',
+    logo: '/logos/tvchosun.png',
+    type: 'youtube',
+    youtubeChannelId: 'UCWlV3Lz_55UaX4JsMj-z__Q',
+    description: 'TV조선 뉴스 24시간 라이브',
+    officialUrl: 'https://news.tvchosun.com',
+    channelNumber: 19,
+  },
 
-  // ===== PUBLIC (3) - 24시간 라이브 확인 =====
+  // ===== PUBLIC (4) - 24시간 라이브 확인 =====
   {
     id: 'tbs',
     name: 'tbs TV',
@@ -126,7 +137,19 @@ export const channels: Channel[] = [
     channelNumber: 96,
   },
 
-  // ===== WORLD (16) - 24시간 라이브 확인 =====
+  {
+    id: 'sedaily-tv',
+    name: '서울경제TV',
+    category: 'public',
+    logo: '/logos/sedaily.png',
+    type: 'youtube',
+    youtubeChannelId: 'UC3p-0EWA8OXko2EUDUXAy5w',
+    description: '서울경제TV 24시간 경제뉴스',
+    officialUrl: 'https://www.sentv.co.kr',
+    channelNumber: 99,
+  },
+
+  // ===== WORLD (17) - 24시간 라이브 확인 =====
   {
     id: 'cnn',
     name: 'CNN',
@@ -303,6 +326,17 @@ export const channels: Channel[] = [
     officialUrl: 'https://www.abc.net.au/news',
     channelNumber: 615,
   },
+  {
+    id: 'wion',
+    name: 'WION',
+    category: 'world',
+    logo: '/logos/wion.png',
+    type: 'youtube',
+    youtubeChannelId: 'UC_gUM8rL-Lrg6O3adPW9K1g',
+    description: 'WION 인도 국제뉴스 24시간',
+    officialUrl: 'https://www.wionews.com',
+    channelNumber: 616,
+  },
 ];
 
 export const CHANNEL_COLORS: Record<string, string> = {
@@ -315,10 +349,12 @@ export const CHANNEL_COLORS: Record<string, string> = {
   'jtbc-news': '#e4002b',
   'mbn': '#ed1c24',
   'channel-a': '#ff6600',
+  'tv-chosun-news': '#003478',
   // Public
   'tbs': '#0054a6',
   'kbs-world': '#1a1a6c',
   'arirang': '#e94e1b',
+  'sedaily-tv': '#0066cc',
   // World
   'cnn': '#cc0000',
   'sky-news': '#c80000',
@@ -336,4 +372,5 @@ export const CHANNEL_COLORS: Record<string, string> = {
   'bloomberg': '#1a1a1a',
   'india-today': '#e21b22',
   'abc-australia': '#d62728',
+  'wion': '#e21b22',
 };
